@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health - The Misinformer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Centered Header Logo -->
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="The Misinformer Logo" id="logo">
+    </a>
+  </header>
+
+  <!-- Main Content -->
+  <main id="content">
+    <a href="articles/tummyache.html" class="article-card">
+      <section class="article-section">
+        <h2>Man sad because of tummy ache</h2>
+        <img src="images/tummy-ache.jpeg" alt="Tummy ache guy" class="article-img">
+        <p>Experts confirm: having a tummy ache is a leading cause of being a little guy who's just not having a good time. <strong>Click to read more...</strong></p>
+      </section>
+    </a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 The Misinformer. All rights reserved.</p>
+  </footer>
+
+  <!-- Bottom Navigation -->
+  <div class="mobile-bottom-nav">
+    <a href="index.html">Home</a>
+    <button id="newsToggle">News</button>
+    <a href="wordle.html">Games</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- News Dropdown -->
+  <div id="newsMenu" class="news-dropdown">
+    <a href="world.html">World</a>
+    <a href="us.html">U.S.</a>
+    <a href="business.html">Business</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="health.html">Health</a>
+    <a href="weather.html">Weather</a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('newsToggle');
+    const menu = document.getElementById('newsMenu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    });
+  </script>
+
+</body>
+<div class="page-spacer"></div>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Man Sad Because of Tummy Ache</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Centered Header Logo -->
+  <header>
+    <a href="../index.html">
+      <img src="../images/logo.png" alt="The Misinformer Logo" id="logo">
+    </a>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article>
+      <h1>Man sad because of tummy ache</h1>
+      <img src="../images/tummy-ache.jpeg" alt="Tummy ache guy" class="article-img" />
+
+      <p>Local man Jared Cluff, 27, is reportedly “not doing so hot” after consuming four gas station burritos and two chili cheese dogs in under ten minutes — a decision that has led to what doctors describe as “tummy devastation.”</p>
+
+      <p>“He said he was fine,” reported his friend Kyle. “Then he sat down and made a noise that sounded like a kettle slowly dying.”</p>
+
+      <p>Emergency services were not contacted, but several blankets and a SpongeBob-shaped ice pack were deployed. “He didn’t want water,” Kyle added. “He wanted a second chili cheese dog. This may be a cry for help.”</p>
+
+      <p>Medical professionals recommend avoiding any food labeled “volcano” or “risky midnight snack” during weekdays. “A tummy ache isn’t just physical,” said one gastroenterologist. “It’s a spiritual reckoning.”</p>
+
+      <p>As of press time, Jared was seen curled in a blanket watching *Shrek 2* and whispering, “This is my swamp now.”</p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 The Misinformer. All rights reserved.</p>
+  </footer>
+
+  <!-- Bottom Navigation -->
+  <div class="mobile-bottom-nav">
+    <a href="../index.html">Home</a>
+    <button id="newsToggle">News</button>
+    <a href="../wordle.html">Games</a>
+    <a href="../about.html">About</a>
+  </div>
+
+  <!-- News Dropdown -->
+  <div id="newsMenu" class="news-dropdown">
+    <a href="../world.html">World</a>
+    <a href="../us.html">U.S.</a>
+    <a href="../business.html">Business</a>
+    <a href="../entertainment.html">Entertainment</a>
+    <a href="../health.html">Health</a>
+    <a href="../weather.html">Weather</a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('newsToggle');
+    const menu = document.getElementById('newsMenu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    });
+  </script>
+
+</body>
+<div class="page-spacer"></div>
+</html>

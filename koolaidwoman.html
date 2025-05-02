@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Woman Falls in Love with Kool Aid Man</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Centered Header Logo -->
+  <header>
+    <a href="../index.html">
+      <img src="../images/logo.png" alt="The Misinformer Logo" id="logo">
+    </a>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article>
+      <h1>Woman falls in love with Kool Aid Man</h1>
+      <img src="../images/kool-aid-woman.jpeg" alt="Kool Aid Woman" class="article-img" />
+
+      <p>In what might be the boldest romance since Shrek and Fiona, a Wisconsin woman has professed her love for none other than the Kool Aid Man — the bright red pitcher known for busting through walls and quenching thirsts nationwide.</p>
+
+      <p>“I don’t care if he’s 85% corn syrup and 15% glass shards,” said 34-year-old Marissa Plunkett. “When he says 'Oh Yeah!'... I feel seen.”</p>
+
+      <p>The two reportedly met at a Fourth of July barbecue when the Kool Aid Man crashed — literally — through her cousin's garage. “Most people were screaming,” she said, “but I saw a gentle sweetness behind those cherry-red eyes.”</p>
+
+      <p>Since then, the couple has been spotted on beach walks, date nights at Denny’s, and even attending couples counseling — where Kool Aid Man mostly just said "OH YEAHHHHH!" in various tones of agreement.</p>
+
+      <p>Critics have called the relationship unstable, citing "high sugar content and a tendency to shatter under pressure." But Marissa remains undeterred. “Love is love,” she said. “Even if it comes in powdered form.”</p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 The Misinformer. All rights reserved.</p>
+  </footer>
+
+  <!-- Mobile Bottom Navigation -->
+  <div class="mobile-bottom-nav">
+    <a href="../index.html">Home</a>
+    <button id="newsToggle">News</button>
+    <a href="../wordle.html">Games</a>
+    <a href="../about.html">About</a>
+  </div>
+
+  <!-- News Dropdown -->
+  <div id="newsMenu" class="news-dropdown">
+    <a href="../world.html">World</a>
+    <a href="../us.html">U.S.</a>
+    <a href="../business.html">Business</a>
+    <a href="../entertainment.html">Entertainment</a>
+    <a href="../health.html">Health</a>
+    <a href="../weather.html">Weather</a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('newsToggle');
+    const menu = document.getElementById('newsMenu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    });
+  </script>
+
+</body>
+<div class="page-spacer"></div>
+</html>

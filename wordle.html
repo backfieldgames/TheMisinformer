@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Misinformer Wordle</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .wordle-container {
+      max-width: 400px;
+      margin: 40px auto;
+      text-align: center;
+      font-family: 'Courier New', monospace;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 50px);
+      gap: 5px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .cell {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: #fff;
+    }
+    .correct { background-color: #6aaa64; color: white; }
+    .close { background-color: #c9b458; color: white; }
+    .wrong { background-color: #787c7e; color: white; }
+    input {
+      text-transform: uppercase;
+      padding: 10px;
+      font-size: 18px;
+      width: 160px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Centered Header Logo -->
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="The Misinformer Logo" id="logo" />
+    </a>
+  </header>
+
+  <!-- Wordle Game Container -->
+  <div class="wordle-container">
+    <h2>The Misinformer Wordle</h2>
+    <div id="board"></div>
+    <input type="text" id="guessInput" maxlength="5" placeholder="Enter 5-letter word" />
+    <button onclick="submitGuess()">Guess</button>
+    <p id="message"></p>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="mobile-bottom-nav">
+    <a href="index.html">Home</a>
+    <button id="newsToggle">News</button>
+    <a href="wordle.html">Games</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- News Dropdown -->
+  <div id="newsMenu" class="news-dropdown">
+    <a href="world.html">World</a>
+    <a href="us.html">U.S.</a>
+    <a href="business.html">Business</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="health.html">Health</a>
+    <a href="weather.html">Weather</a>
+  </div>
+
+  <!-- Wordle Script + News Menu Toggle -->
+  <script>
+    const words = ["blame", "crisp", "jelly", "whale", "sugar", "fraud", "dizzy", "vapor", "quirk", "goofy"];
+    const solution = words[Math.floor(Math.random() * words.length)].toUpperCase();
+
+    let currentRow = 0;
+    const maxRows = 6;
+
+    const board = document.getElementById("board");
+    for (let i = 0; i < maxRows; i++) {
+      const row = document.createElement("div");
+      row.classList.add("grid");
+      row.setAttribute("id", `row-${i}`);
+      for (let j = 0; j < 5; j++) {
+        const cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.setAttribute("id", `cell-${i}-${j}`);
+        row.appendChild(cell);
+      }
+      board.appendChild(row);
+    }
+
+    function submitGuess() {
+      const input = document.getElementById("guessInput");
+      const guess = input.value.toUpperCase();
+      if (guess.length !== 5) return alert("Enter a 5-letter word");
+
+      for (let i = 0; i < 5; i++) {
+        const cell = document.getElementById(`cell-${currentRow}-${i}`);
+        cell.textContent = guess[i];
+
+        if (guess[i] === solution[i]) {
+          cell.classList.add("correct");
+        } else if (solution.includes(guess[i])) {
+          cell.classList.add("close");
+        } else {
+          cell.classList.add("wrong");
+        }
+      }
+
+      if (guess === solution) {
+        document.getElementById("message").textContent = "You got it! 🎉";
+        document.getElementById("guessInput").disabled = true;
+      } else {
+        currentRow++;
+        if (currentRow >= maxRows) {
+          document.getElementById("message").textContent = `Game Over! Word was: ${solution}`;
+          document.getElementById("guessInput").disabled = true;
+        }
+      }
+
+      input.value = "";
+    }
+
+    // Toggle dropdown
+    const toggle = document.getElementById('newsToggle');
+    const menu = document.getElementById('newsMenu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    });
+  </script>
+
+</body>
+<div class="page-spacer"></div>
+</html>

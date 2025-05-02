@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - The Misinformer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Logo Header (centered on mobile, left on desktop) -->
+  <header>
+    <a href="index.html"><img src="images/logo.png" alt="The Misinformer Logo" id="logo" /></a>
+  </header>
+
+  <!-- Main Content -->
+  <main id="content">
+    <section class="about-section">
+      <h2>Who We Are</h2>
+      <p><strong>The Misinformer</strong> is your #1 source for 100% factually questionable content. <a href="#contact">Jump to Contact Form</a></p>
+      <p>Founded in a campus coffee shop after a heated debate over whether pigeons are government drones, our mission is to flood the internet with stories that sound just real enough to fool your uncle.</p>
+      <p>We believe in journalistic chaos. While others chase “truth,” we cover important stories like vending machine marriages and the hidden history of giant hamsters. Our team is fueled by caffeine, curiosity, and one raccoon with server access (we don't talk about it).</p>
+
+      <div class="social-links">
+        <p><strong>Follow us for more misinformation:</strong></p>
+        <div class="social-buttons">
+          <a href="https://twitter.com" class="social-button x" target="_blank">X</a>
+          <a href="https://facebook.com" class="social-button facebook" target="_blank">Facebook</a>
+          <a href="https://instagram.com" class="social-button instagram" target="_blank">Instagram</a>
+          <a href="https://youtube.com" class="social-button youtube" target="_blank">YouTube</a>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="about-section">
+      <h2>Our Team</h2>
+      <div class="team">
+        <div class="member">
+          <img src="images/person1.png" alt="Alex Thompson" class="team-photo" />
+          <h3>Alex "The Typo" Thompson</h3>
+          <p>Editor-in-Chief & resident conspiracy theorist. Once published an article upside down and called it "experimental formatting."</p>
+        </div>
+        <div class="member">
+          <img src="images/person2.png" alt="Jordan Memez" class="team-photo" />
+          <h3>Jordan Memez</h3>
+          <p>Lead Content Strategist. Thinks in screenshots. Speaks exclusively in Gen Z slang and Vine references.</p>
+        </div>
+        <div class="member">
+          <img src="images/person3.png" alt="Dr. Cheddar" class="team-photo" />
+          <h3>Dr. Cheddar</h3>
+          <p>Fact-Checker & Cheese Enthusiast. Not a real doctor. Possibly a cat. The mystery continues.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2>Contact Us</h2>
+      <form action="form-handler.php" method="POST">
+        <input type="text" name="firstName" placeholder="First Name" required />
+        <input type="text" name="lastName" placeholder="Last Name" required />
+        <input type="email" name="email" placeholder="example@email.com" required />
+        <input type="tel" name="phone" placeholder="(xxx)xxx-xxxx" />
+        <textarea name="message" placeholder="Type your message..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@misinformer.com</p>
+        <p><strong>Location:</strong> Purdue University</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 The Misinformer. All rights reserved.</p>
+  </footer>
+
+  <!-- Mobile Bottom Nav -->
+  <div class="mobile-bottom-nav">
+    <a href="index.html">Home</a>
+    <button id="newsToggle">News</button>
+    <a href="wordle.html">Games</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- News Dropdown -->
+  <div id="newsMenu" class="news-dropdown">
+    <a href="world.html">World</a>
+    <a href="us.html">U.S.</a>
+    <a href="business.html">Business</a>
+    <a href="entertainment.html">Entertainment</a>
+    <a href="health.html">Health</a>
+    <a href="weather.html">Weather</a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('newsToggle');
+    const menu = document.getElementById('newsMenu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    });
+  </script>
+
+</body>
+<div class="page-spacer"></div>
+</html>
+
