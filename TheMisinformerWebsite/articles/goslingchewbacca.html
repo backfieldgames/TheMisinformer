@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryan Gosling and Chewbacca Expecting Third Child</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- Centered Header Logo -->
+  <header>
+    <a href="../index.html">
+      <img src="../images/logo.png" alt="The Misinformer Logo" id="logo">
+    </a>
+  </header>
+
+  <main>
+    <article>
+      <h1>Ryan Gosling and Chewbacca now expecting their third kid</h1>
+      <img src="../images/gosling-chewbacca.jpeg" alt="Gosling and Chewbacca" class="article-img" />
+
+      <p>In a galaxy shockingly close to Hollywood, actor Ryan Gosling and legendary Wookiee Chewbacca have confirmed they are expecting their third child together.</p>
+
+      <p>The news broke after the couple was spotted exiting a Baby Gap in Beverly Hills, where Chewbacca reportedly attempted to eat a stroller thinking it was a snack. Witnesses say Gosling looked calm and radiant, while Chewbacca was “shedding with joy.”</p>
+
+      <p>This marks the third addition to the unconventional household, which already includes a toddler named “Growlston” and a 4-year-old named “Sebastian Solo Gosling.”</p>
+
+      <p>“We’re beyond thrilled,” Gosling told The Misinformer. “Chewie’s been nesting — he built a crib entirely out of dismantled droids.”</p>
+
+      <p>The couple met in 2016 on the set of <em>La La Wookiee</em>, an ill-fated Star Wars musical spinoff that was never released due to “excessive emotional dancing and fur allergies.” Despite the flop, their love blossomed in the shadows of Hollywood’s weirdest love stories.</p>
+
+      <p>Fans have already started speculating on baby names. Top contenders include “Fluff Vader,” “ChewJunior,” and “Mick Jaggernaut.”</p>
+
+      <p>When asked if they’ll be expanding their home, Gosling smiled and said, “We’re looking into real estate on Endor. The Ewoks have a good school system.”</p>
+
+      <p>As for Han Solo? He's reportedly “fine,” but unfollowed Gosling on Instagram late last night.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The Misinformer. All rights reserved.</p>
+  </footer>
+
+  <!-- Mobile Bottom Navigation -->
+  <div class="mobile-bottom-nav">
+    <a href="../index.html">Home</a>
+    <button id="newsToggle">News</button>
+    <a href="../wordle.html">Games</a>
+    <a href="../about.html">About</a>
+  </div>
+
+  <!-- News Dropdown -->
+  <div id="newsMenu" class="news-dropdown">
+    <a href="../world.html">World</a>
+    <a href="../us.html">U.S.</a>
+    <a href="../business.html">Business</a>
+    <a href="../entertainment.html">Entertainment</a>
+    <a href="../health.html">Health</a>
+    <a href="../weather.html">Weather</a>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('newsToggle');
+    const menu = document.getElementById('newsMenu');
+    toggle.addEventListener('click', () => {
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    });
+  </script>
+
+</body>
+<div class="page-spacer"></div>
+</html>

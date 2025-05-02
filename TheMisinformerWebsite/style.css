@@ -1,0 +1,367 @@
+/* === BASE STYLES === */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f4f1ea;
+  color: #111;
+  /* REMOVE this line ↓ */
+  /* padding-bottom: 60px; */
+}
+
+
+header {
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 5px double #fff;
+}
+
+#logo {
+  height: 100px;
+}
+
+/* === Main Content === */
+main {
+  padding: 20px;
+  max-width: 960px;
+  margin: auto;
+  background-color: #fff;
+  border: 3px solid #333;
+  box-sizing: border-box;
+  padding-bottom: 70px; /* extra room for footer + nav bar */
+}
+
+
+.article-section {
+  border-bottom: 3px double #000;
+  padding: 20px 0;
+}
+
+.article-section h2 {
+  font-size: 1.8em;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}
+
+.article-section img,
+.article-img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #000;
+  background-color: #fff8cc;
+  border-radius: 8px;
+}
+
+a.article-card h2 {
+  color: #000;
+  text-decoration: none;
+}
+
+a.article-card h2:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-family: Georgia, serif;
+  border-top: 5px double #fff;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 70px; /* makes space so it's visible above the nav */
+}
+
+
+/* === Bottom Navigation (All Screens) === */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 999;
+  border-top: 3px solid #fff;
+}
+
+.mobile-bottom-nav a,
+.mobile-bottom-nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* === Dropdown News Menu === */
+.news-dropdown {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  z-index: 998;
+  border-top: 1px solid #444;
+}
+
+.news-dropdown a {
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-top: 1px solid #444;
+}
+
+.news-dropdown a:hover {
+  background-color: #333;
+}
+
+/* === About Page Specific Styles === */
+.about-section {
+  padding: 20px 0;
+  border-bottom: 3px double #000;
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 20px;
+}
+
+.member {
+  width: 30%;
+  font-family: 'Georgia', serif;
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 10px;
+  border: 1px solid #000;
+  font-size: 1em;
+  font-family: 'Times New Roman', serif;
+  background-color: #fafafa;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-section button {
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  width: 100%;
+}
+
+.contact-section button:hover {
+  background: #333;
+}
+
+/* === Responsive Fixes for Mobile === */
+@media (max-width: 768px) {
+  .member {
+    width: 100%;
+  }
+
+  .team-photo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.news-dropdown {
+  position: fixed;
+  bottom: 60px; /* <- Match nav height exactly */
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  z-index: 998;
+  margin: 0;
+  padding: 0;
+  border-top: none;
+}
+
+
+.news-dropdown a {
+  color: white;
+  padding: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+.news-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  height: 60px; /* <- Set explicit height */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+  border-top: 3px solid #fff;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.bottom-spacer 
+{
+  height: 20x; /* Match the height of .mobile-bottom-nav */
+}
+
+/* === Social Buttons === */
+.social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-button {
+  padding: 12px 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: transform 0.2s;
+  display: inline-block;
+  min-width: 130px;
+  text-align: center;
+}
+
+.social-button:hover {
+  transform: scale(1.05);
+}
+
+/* Gradient Themes */
+.x {
+  background: linear-gradient(135deg, #000000, #444444);
+}
+
+.facebook {
+  background: linear-gradient(135deg, #3b5998, #1e2e4f);
+}
+
+.instagram {
+  background: linear-gradient(135deg, #feda75, #d62976, #4f5bd5);
+}
+
+.youtube {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.page-spacer {
+  height: 70px;   /* same height as your .mobile-bottom-nav */
+  width: 100%;
+  display: block;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.mobile-bottom-nav {
+  z-index: 1000;
+}
+.news-dropdown {
+  z-index: 999;
+}
+
+/* Fix for mobile article images overflowing */
+.article-section img,
+.article-img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #000;
+  background-color: #fff8cc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 70px; /* enough space for nav bar */
+}
+
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  z-index: 999;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
